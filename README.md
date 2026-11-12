@@ -1,26 +1,45 @@
-# BLIP Fine‑Tuned Caption Generator
+# BLIP Fine-Tuned Image Caption Generator
 
-A tiny Gradio demo that turns any image into a descriptive caption using a **BLIP model fine‑tuned on Flickr30k** (`omarkashif/blip-finetuned-flickr30k`).
+An image captioning application powered by **BLIP (Bootstrapping Language-Image Pre-training)**, fine-tuned on the **Flickr30k dataset**. Built with PyTorch, Hugging Face Transformers, and Gradio to generate natural-language descriptions of uploaded images.
 
----
+### 🚀 Live Demo
 
-## Quick start
+**[Try the Image Caption Generator](https://omarkashif-imagecaption.hf.space/)**
+
+Upload an image and generate a descriptive caption using the fine-tuned model.
+
+### 🛠️ Tech Stack
+
+- **Model:** BLIP (Vision-Language Model)
+- **Dataset:** Flickr30k
+- **Frameworks:** PyTorch, Hugging Face Transformers
+- **Interface:** Gradio
+- **Deployment:** Hugging Face Spaces
+
+### ⚡ Quick Start
 
 ```bash
 git clone https://github.com/omarkashif/ImageCaptionBLIP.git
 cd ImageCaptionBLIP
-pip install -r requirements.txt     # installs torch, transformers, gradio, pillow …
-python app.py                       # launches the Gradio app
+pip install -r requirements.txt
+python app.py
 ```
 
-## **How it works**
+The Gradio interface will launch locally in your browser.
 
-Model – BLIP fine‑tuned on the Flickr30k captions dataset.
+### 🔍 How It Works
 
-Interface – Simple upload‑and‑caption flow built with Gradio.
+1. **Image Upload:** Users upload an image through the Gradio interface.
+2. **Preprocessing:** The BLIP processor prepares the image for inference.
+3. **Caption Generation:** The fine-tuned BLIP model generates a natural-language caption using beam search.
+4. **Output:** The generated caption is displayed in the interface.
 
-Hardware – Runs on GPU if available, otherwise falls back to CPU.
+### 🤗 Model
 
+The model is fine-tuned on Flickr30k and hosted on Hugging Face:
 
+**[omarkashif/blip-finetuned-flickr30k](https://huggingface.co/omarkashif/blip-finetuned-flickr30k)**
 
+### 💻 Hardware
 
+Supports GPU acceleration when available, with automatic fallback to CPU inference.
